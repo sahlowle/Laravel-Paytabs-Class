@@ -50,28 +50,7 @@ class PayTabService
     
     /*
     |--------------------------------------------------------------------------
-    | get Settings
-    |--------------------------------------------------------------------------
-    */
-    public static function getSettings($data)
-    {
-        $setting = [];
-
-        $setting = [
-            "profile_id" => config('paytabs.profile_id'),
-            "cart_currency" => config('paytabs.currency'),
-            "currency" => config('paytabs.currency'),
-            'tran_type' => $data["tran_type"],
-            'tran_class' => 'ecom',
-        ];
-
-        return $setting;
-    }
-
-    
-    /*
-    |--------------------------------------------------------------------------
-    | get Settings
+    | Make Request
     |--------------------------------------------------------------------------
     */
     public static function makeRequest()
@@ -90,4 +69,24 @@ class PayTabService
 
 		return $request;
 	}
+
+    /*
+    |--------------------------------------------------------------------------
+    | get Settings
+    |--------------------------------------------------------------------------
+    */
+    public static function getSettings($data)
+    {
+        $setting = [];
+
+        $setting = [
+            "profile_id" => config('paytabs.profile_id'),
+            "cart_currency" => config('paytabs.currency'),
+            "currency" => config('paytabs.currency'),
+            'tran_type' => $data["tran_type"],
+            'tran_class' => 'ecom',
+        ];
+
+        return $setting;
+    }
 }
