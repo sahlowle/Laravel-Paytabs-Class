@@ -1,7 +1,4 @@
 
-![Logo](https://i0.wp.com/www.menabytes.com/wp-content/uploads/2017/08/PayTabs-1-1.jpg?w=1000&ssl=1)
-
-
 # Laravel Paytabs Class
 
 Simple easy class to intgrate with Paytabs Gateway
@@ -58,11 +55,11 @@ $response = PayTabService::query_transaction($tran_ref);
 $status = $response->payment_result->response_status;
 
 if ($status == "A") {
-        return "Payment Success";
-        }
-        else {
-            return "Payment Faild";
-   }
+    return "Payment Success";
+    }
+    else {
+         return "Payment Faild";
+         }
 
 ```
 
